@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional Security Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Custom styles */
+    /* Scrollbar for textarea */
+    textarea::-webkit-scrollbar {
+      width: 8px;
+    }
+    .hero-section img {
+    /* Adjust the border-radius value as needed for an oval effect */
+    border-radius: 50%; /* This will create a perfect circle */
+    /* or use a higher percentage for an oval */
+    /* border-radius: 30%; */
+}
+    textarea::-webkit-scrollbar-thumb {
+      background-color: #2563eb;
+      border-radius: 10px;
+    }
+    /* Custom play button for video placeholder */
+    <style>
+  .play-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .play-circle:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+
+    .play-circle svg {
+      fill: #fff;
+      width: 20px;
+      height: 20px;
+      margin-left: 3px;
+    }
+    /* For the active card highlight effect */
+    .card-active {
+      background-color: #1e40af;
+      color: white;
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgb(30 64 175 / 0.5);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <!-- Navbar -->
+<header class="w-full bg-white shadow sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+    <a href="#" class="font-extrabold text-xl tracking-wide text-indigo-700">SecurePro</a>
+
+    <!-- Desktop Navigation -->
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-medium text-sm">
+      <li><a href="#" class="hover:text-indigo-700 transition">Home</a></li>
+
+      <li class="relative group">
+        <button class="flex items-center gap-1 hover:text-indigo-700 transition focus:outline-none">
+          About Us
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </button>
+        <ul class="absolute left-0 top-full bg-white shadow-lg rounded-md py-2 mt-2 w-44 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transition-all duration-200 z-20">
+          <li><a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50">Our Team</a></li>
+          <li><a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50">Company History</a></li>
+          <li><a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50">Careers</a></li>
+        </ul>
+      </li>
+
+      <li class="relative group">
+        <button class="flex items-center gap-1 hover:text-indigo-700 transition focus:outline-none">
+          Services
+          <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </button>
+        <ul class="absolute left-0 top-full bg-white shadow-lg rounded-md py-2 mt-2 w-44 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-1 transition-all duration-200 z-20">
+          <li><a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50">Security Camera</a></li>
+          <li><a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50">Fire Detection</a></li>
+          <li><a href="#" class="block px-4 py-2 text-sm hover:bg-indigo-50">Smart Home</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#" class="hover:text-indigo-700 transition">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="md:hidden focus:outline-none text-gray-700">
+      <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+    <ul class="px-6 py-4 space-y-3 font-medium text-gray-700">
+      <li><a href="#" class="flex items-center gap-2" onclick="closeMobileMenu()"><span>🏠</span> Home</a></li>
+      <li><a href="#" class="flex items-center gap-2" onclick="closeMobileMenu()"><span>👥</span> About Us</a></li>
+      <li><a href="#" class="flex items-center gap-2" onclick="closeMobileMenu()"><span>🛡️</span> Services</a></li>
+      <li><a href="#" class="flex items-center gap-2" onclick="closeMobileMenu()"><span>📄</span> Pages</a></li>
+      <li><a href="#" class="flex items-center gap-2" onclick="closeMobileMenu()"><span>📞</span> Contact</a></li>
+
+      <li class="flex items-center justify-center gap-4 pt-2 text-lg">
+        <a href="#" class="hover:text-indigo-700"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-indigo-700"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-indigo-700"><i class="fab fa-linkedin-in"></i></a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-8">
+    <div class="flex-1 max-w-xl">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
+        Professional <br>
+        <span class="text-indigo-700">Security Services</span><br>
+        You Can Trust
+      </h1>
+      <p class="mt-4 text-gray-700 text-base leading-relaxed">
+  <strong>SecurePro</strong> is a trusted leader in smart security solutions, offering advanced surveillance systems, fire safety devices, and smart home automation. Our mission is to ensure safety, comfort, and control through innovative technology tailored to your needs.
+</p>
+      <div class="mt-10 flex space-x-12 text-center">
+        <div>
+          <div class="text-3xl font-extrabold text-indigo-700">11</div>
+          <div class="text-gray-500 font-semibold uppercase text-sm mt-1">Experience</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-indigo-700">25</div>
+          <div class="text-gray-500 font-semibold uppercase text-sm mt-1">Product</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-indigo-700">100+</div>
+          <div class="text-gray-500 font-semibold uppercase text-sm mt-1">Project Done</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 relative max-w-md w-full">
+      <div class="rounded-full overflow-hidden border-4 border-indigo-700 shadow-lg bg-white relative w-[250px] h-[400px] mx-auto">
+  <img
+    src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b241ef98-3f31-4afa-932e-076e85fe5a72.png"
+    alt="Security Camera"
+    class="w-full h-full object-cover"
+  />
+
+  <!-- ✅ Play button -->
+  <button id="hero-play-btn" aria-label="Play Video"
+    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-indigo-700 p-4 rounded-full shadow-lg hover:scale-110 transition">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M8 5v14l11-7z"></path>
+    </svg>
+  </button>
+</div>
+
+    </div>
+  </section>
+
+  <!-- Services Cards with highlight -->
+  <section class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+<div class="p-6 bg-indigo-200 rounded-lg shadow text-center hover:bg-indigo-400 transition cursor-pointer" data-card="innovation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-indigo-700 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v14m7-7H5"/>
+        </svg>
+        <div class="font-semibold text-lg text-indigo-700">Innovation</div>
+        <p class="text-gray-600 mt-2 text-sm"> We constantly integrate cutting-edge technology to deliver advanced, future-ready security solutions that meet modern needs..</p>
+      </div>
+<div class="p-6 bg-indigo-200 rounded-lg shadow text-center hover:bg-indigo-400 transition cursor-pointer" data-card="highquality">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-indigo-700 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 12H7m0-18h10l3 6-3 6H7m10 0v-6H7v6"/>
+        </svg>
+        <div class="font-semibold text-lg text-indigo-700">High Quality</div>
+        <p class="text-gray-600 mt-2 text-sm"> We prioritize premium materials and rigorous quality control to ensure long-lasting performance in all our security products..</p>
+      </div>
+      <div class="p-6 bg-indigo-200 rounded-lg shadow text-center hover:bg-indigo-400 transition cursor-pointer" data-card="bestproduct">
+  <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-indigo-700 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+  </svg>
+  <div class="font-semibold text-lg text-indigo-700">Best Product</div>
+  <p class="text-gray-600 mt-2 text-sm">    Our top-rated products are trusted by hundreds of clients, known for their reliability, performance, and smart capabilities..</p>
+</div>
+
+<div class="p-6 bg-indigo-200 rounded-lg shadow text-center hover:bg-indigo-400 transition cursor-pointer" data-card="topservices">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-10 w-10 text-indigo-700 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 12H7m6-6v6m4-6v6"/>
+        </svg>
+        <div class="font-semibold text-lg text-indigo-700">Top Services</div>
+        <p class="text-gray-600 mt-2 text-sm"> From installation to after-sales support, we deliver professional and prompt services for a seamless customer experience.
+      .</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+<section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10 items-start relative">
+
+  <!-- LEFT COLUMN: DOUBLE SQUARE IMAGES STACKED -->
+  <div class="flex flex-col max-w-sm mx-auto md:mx-0">
+    <!-- IMAGE 1 -->
+    <div class="relative rounded-xl overflow-hidden shadow-lg h-[350px] w-[350px]">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/71543076-c035-4ff7-8347-b735dddd4ddb.png"
+           alt="Security Camera"
+           class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-indigo-900 bg-opacity-60 mix-blend-multiply"></div>
+    </div>
+
+    <!-- IMAGE 2 (NO GAP) -->
+    <div class="relative rounded-xl overflow-hidden shadow-lg h-[350px] w-[350px] mt-0">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/71543076-c035-4ff7-8347-b735dddd4ddb.png"
+           alt="Security Camera"
+           class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-indigo-900 bg-opacity-60 mix-blend-multiply"></div>
+    </div>
+  </div>
+
+  <!-- CENTER COLUMN: EXPANDED ABOUT US BLOCK OVERLAPPING IMAGE STACK -->
+<div class="bg-indigo-700 text-white rounded-xl px-8 py-14 flex flex-col justify-between max-w-md mx-auto md:mx-0 shadow-lg absolute top-[0px] left-1/2 transform -translate-x-1/4 -translate-y-36 md:static md:col-span-1 z-10 md:translate-y-0 md:top-auto md:left-auto" style="height: 750px;">
+
+    <h2 class="text-2xl font-extrabold mb-4">About Us</h2>
+    <p class="text-sm leading-relaxed">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+    </p>
+    <button class="mt-6 bg-indigo-900 hover:bg-indigo-800 rounded-md py-2 px-6 font-semibold self-start transition focus:outline-none focus:ring-2 focus:ring-indigo-400">Learn More</button>
+    <svg viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 right-0 opacity-10 pointer-events-none" style="width: 220px; height: 180px; transform: translate(25%, -25%)">
+      <rect x="50" y="50" width="200" height="150" stroke="white" stroke-width="5" rx="20" ry="20" stroke-dasharray="20 15" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- RIGHT COLUMN: WHY CHOOSE US BLOCK -->
+<div class="bg-white rounded-xl p-8 shadow-lg max-w-md mx-auto md:mx-0 self-stretch md:-ml-12" style="height: 690px;">
+  <h3 class="text-3xl font-bold mb-8 text-gray-900">Why Choose Us</h3>
+
+  <!-- ✅ Updated Paragraph Matching Style -->
+  <p class="text-base text-gray-600 leading-relaxed mb-8">
+    Choosing us means partnering with a team that values quality, reliability, and your satisfaction above all. We are committed to providing outstanding service and innovative solutions tailored to your needs.
+  </p>
+
+  <div class="space-y-8">
+
+    <!-- FEATURE 1 -->
+    <div class="flex items-start gap-4">
+      <div class="p-3 bg-indigo-100 text-indigo-700 rounded-full">
+        <svg class="w-6 h-6" ...></svg>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-gray-800 mb-1">23 Years Experience</h4>
+        <p class="text-base text-gray-600 leading-relaxed">
+          With over two decades of experience, we have developed deep expertise and built long-lasting trust with our clients. Our journey has been shaped by continuous innovation and a commitment to quality.
+        </p>
+      </div>
+    </div>
+
+    <!-- FEATURE 2 -->
+    <div class="flex items-start gap-4">
+      <div class="p-3 bg-indigo-100 text-indigo-700 rounded-full">
+        <svg class="w-6 h-6" ...></svg>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-gray-800 mb-1">24/7 Support</h4>
+        <p class="text-base text-gray-600 leading-relaxed">
+          Our support team is available around the clock to assist you. Whether it’s day or night, weekday or weekend, we’re always here to ensure smooth operations and quick solutions.
+        </p>
+      </div>
+    </div>
+
+    <!-- FEATURE 3 -->
+    <div class="flex items-start gap-4">
+      <div class="p-3 bg-indigo-100 text-indigo-700 rounded-full">
+        <svg class="w-6 h-6" ...></svg>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-gray-800 mb-1">Industry Certified</h4>
+        <p class="text-base text-gray-600 leading-relaxed">
+          We hold certifications from the most respected authorities in our industry. These credentials reflect our dedication to maintaining top-notch standards and delivering services you can trust.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</section>
+
+  <!-- Our Partners section -->
+<section class="max-w-7xl mx-auto px-6 py-10">
+
+  <!-- FLEX ROW: Heading + Logos -->
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+    <!-- Heading -->
+    <div class="text-left text-gray-900 font-semibold text-lg mb-2 md:mb-0">
+      Our Partners
+    </div>
+
+    <!-- Logos aligned right -->
+    <div class="flex gap-20 flex-wrap md:justify-end">
+      <!-- Logo 1 -->
+      <div class="opacity-50 hover:opacity-100 transition cursor-pointer" title="Logo dummy 1">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/83ea1d87-31b8-48e1-ad8e-49bf772c2aa0.png" alt="Logo One" class="h-20 object-contain" />
+      </div>
+      <!-- Logo 2 -->
+      <div class="opacity-50 hover:opacity-100 transition cursor-pointer" title="Logo dummy 2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ee414d4f-6954-4921-90aa-7d1371d3b809.png" alt="Logo Two" class="h-20 object-contain" />
+      </div>
+      <!-- Logo 3 -->
+      <div class="opacity-50 hover:opacity-100 transition cursor-pointer" title="Logo dummy 3">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b9021606-4a6c-41c1-8aeb-f55e5696972b.png" alt="Logo Three" class="h-20 object-contain" />
+      </div>
+      <!-- Logo 4 -->
+      <div class="opacity-50 hover:opacity-100 transition cursor-pointer" title="Logo dummy 4">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/472c0ad6-eac6-480b-9ff0-f8ef8e8ba2c8.png" alt="Logo Four" class="h-20 object-contain" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Paragraph below heading -->
+  <p class="text-left text-lg text-gray-600 leading-relaxed max-w-md">
+    Choosing us means partnering with a team that values quality, reliability, and your satisfaction above all.
+  </p>
+</section>
+
+
+  <!-- Heading -->
+
+
+  <!-- Services We Provide -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <div class="flex justify-between items-start">
+    <h2 class="text-3xl font-extrabold text-gray-900">We Provide The Best Services</h2>
+    <p class="text-gray-600 max-w-xl text-right">
+      Discover reliable and cutting-edge security solutions tailored to protect your home and business—empowering you with smart control and peace of mind.
+    </p>
+  </div>
+
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="bg-white shadow-md rounded-xl p-6 text-center border
+                hover:shadow-xl transition-all duration-500
+                w-full h-64 hover:rounded-full
+                hover:bg-indigo-700 hover:text-white
+                flex flex-col items-center justify-center">
+      <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405M9 17H4v-5m5-3v5m0 0h6v4l4-4-4-4v4H9z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold mb-1">Security Camera</h3>
+      <p class="text-sm text-gray-600 hover:text-white mb-3 px-3 transition-all duration-300">
+        Real-time monitoring with intelligent alerts and secure storage.
+      </p>
+      <button class="bg-white text-indigo-700 py-1.5 px-4 rounded-md mt-2
+                     hover:bg-indigo-200 hover:text-indigo-900 transition">
+        Learn More
+      </button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white shadow-md rounded-xl p-6 text-center border
+                hover:shadow-xl transition-all duration-500
+                w-full h-64 hover:rounded-full
+                hover:bg-indigo-700 hover:text-white
+                flex flex-col items-center justify-center">
+      <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold mb-1">Fire Detection</h3>
+      <p class="text-sm text-gray-600 hover:text-white mb-3 px-3 transition-all duration-300">
+        Smart sensors detect fire hazards early and alert instantly.
+      </p>
+      <button class="bg-white text-indigo-700 py-1.5 px-4 rounded-md mt-2
+                     hover:bg-indigo-200 hover:text-indigo-900 transition">
+        Learn More
+      </button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white shadow-md rounded-xl p-6 text-center border
+                hover:shadow-xl transition-all duration-500
+                w-full h-64 hover:rounded-full
+                hover:bg-indigo-700 hover:text-white
+                flex flex-col items-center justify-center">
+      <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h4l3 10h8l1-4H9" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold mb-1">Smart Home</h3>
+      <p class="text-sm text-gray-600 hover:text-white mb-3 px-3 transition-all duration-300">
+        Control your home devices remotely with smart automation systems.
+      </p>
+      <button class="bg-white text-indigo-700 py-1.5 px-4 rounded-md mt-2
+                     hover:bg-indigo-200 hover:text-indigo-900 transition">
+        Learn More
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Monitor Workplace and Form -->
+<section class="bg-indigo-700 text-white w-full px-6 py-16 shadow-lg">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start relative">
+
+    <!-- Left: Heading and Text -->
+    <div class="flex flex-col justify-start md:pt-4 pl-8">
+      <h2 class="text-3xl font-extrabold mb-4">Monitor the Workplace From Your Phone</h2>
+      <p class="mb-6 max-w-md text-indigo-100">
+        Stay connected 24/7 with live surveillance, alerts, and smart integrations—all from your mobile device.
+      </p>
+      <button class="bg-indigo-900 hover:bg-indigo-800 rounded-md py-2 px-8 font-semibold transition focus:outline-none focus:ring-2 focus:ring-indigo-400">
+        Learn More
+      </button>
+    </div>
+
+    <!-- Center: Enlarged Image -->
+    <div class="flex items-center justify-center">
+      <img
+        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3ed467d1-8cc9-4a37-b8b1-d1cbfcdf85df.png"
+        alt="Security Camera"
+        class="rounded-xl shadow-lg w-full max-w-md object-cover"
+      />
+    </div>
+
+    <!-- Right: Form, shifted right -->
+    <div class="flex flex-col justify-start md:pt-4 pr-8">
+      <form
+        id="innovation-form"
+        class="bg-indigo-600 bg-opacity-40 rounded-lg p-6 flex flex-col space-y-4"
+      >
+        <h3 class="font-bold text-lg">Latest Innovation</h3>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          class="rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        />
+        <select
+          name="select"
+          required
+          class="rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        >
+          <option value="" disabled selected>Select Option</option>
+          <option value="security">Security</option>
+          <option value="automation">Automation</option>
+          <option value="support">Support</option>
+        </select>
+        <textarea
+          name="message"
+          placeholder="Message"
+          rows="3"
+          required
+          class="rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        ></textarea>
+        <button
+          type="submit"
+          class="self-start bg-indigo-900 hover:bg-indigo-800 rounded-md py-2 px-8 font-semibold transition focus:outline-none focus:ring-2 focus:ring-indigo-400"
+        >
+          Submit Button
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <!-- Working Process -->
+<section class="w-full px-6 py-20 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl font-extrabold text-center mb-3">Our Working Process</h2>
+    <p class="text-center text-gray-600 text-lg mb-12 max-w-3xl mx-auto">
+      From idea to execution, our process is built to deliver seamless installation and long-term support with precision and reliability.
+    </p>
+
+
+    <div class="flex flex-col md:flex-row gap-10 justify-center items-center">
+
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center text-center max-w-xs transition-all duration-300
+            p-6 hover:bg-indigo-700 hover:text-white hover:rounded-xl">
+  <div class="bg-indigo-200 text-indigo-700 rounded-full p-4 mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M17 9V7a5 5 0 00-10 0v2H5v10h14V9h-2z" />
+    </svg>
+  </div>
+  <h3 class="font-semibold mb-2">Discussion</h3>
+  <p class="text-sm max-w-xs">
+    Understand your goals, discuss ideas, and plan a system that fits your exact needs.
+  </p>
+</div>
+
+
+      <div class="hidden md:block border-t-2 border-indigo-300 w-16"></div>
+
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center text-center max-w-xs transition-all duration-300
+            p-6 hover:bg-indigo-700 hover:text-white hover:rounded-xl">
+  <div class="bg-indigo-700 text-white rounded-full p-4 mb-4 transition-colors duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M20 13V7a2 2 0 00-2-2h-4m-4 6v6m0 0h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4v6z" />
+    </svg>
+  </div>
+  <h3 class="font-semibold mb-2">Installation</h3>
+  <p class="text-sm max-w-xs">
+    We install your system with precision and zero disruption, ensuring smooth performance.
+  </p>
+</div>
+
+
+      <div class="hidden md:block border-t-2 border-indigo-300 w-16"></div>
+
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center text-center max-w-xs transition-all duration-300
+            p-6 hover:bg-indigo-700 hover:text-white hover:rounded-xl">
+  <div class="bg-indigo-200 text-indigo-700 rounded-full p-4 mb-4 transition-colors duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M18.364 5.636l-4.243 4.243M7.757 13.243L5 16l1.757-2.757zM15 20l-3-3m6-6l-3-3m-6 6l-3-3" />
+    </svg>
+  </div>
+  <h3 class="font-semibold mb-2">Maintenance</h3>
+  <p class="text-sm max-w-xs">
+    We provide long-term care and expert support to keep your system running flawlessly.
+  </p>
+</div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Nothing Secures You Better Than Us -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+  <!-- Top Row: Heading on left, Paragraph + Learn More on right -->
+  <div class="grid grid-cols-1 md:grid-cols-2 items-start">
+
+    <!-- Left: Heading -->
+    <div>
+      <h2 class="text-5xl font-extrabold text-gray-900">
+        Nothing Secures You Better Than Us
+      </h2>
+    </div>
+
+    <!-- Right: Paragraph + Link aligned to heading -->
+    <div class="text-right">
+      <p class="text-gray-700 text-base leading-relaxed max-w-md ml-auto">
+        In today's fast-paced world, security is not a luxury—it's a necessity. Our intelligent surveillance systems are designed to keep you safe, connected, and in control, no matter where you are.
+      </p>
+      <a href="#" class="text-indigo-700 font-medium hover:underline inline-block mt-2">Learn More →</a>
+    </div>
+  </div>
+
+  <!-- Image & Rating Card side by side -->
+  <div class="mt-10 flex flex-col md:flex-row justify-center items-center gap-4">
+
+    <!-- Image (Expanded Width & Height) -->
+    <div class="w-[560px] h-[560px] md:w-[420px] md:h-[420px] overflow-hidden rounded-xl shadow-lg">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/11194e05-854b-4360-abb7-79f276b387ba.png"
+           alt="Security Camera"
+           class="w-full h-full object-cover" />
+    </div>
+
+    <!-- Rating Card (Same Size as Image) -->
+    <div class="w-[560px] h-[560px] md:w-[420px] md:h-[420px] bg-indigo-700 rounded-xl p-6 flex flex-col justify-between text-white shadow-lg">
+      <div class="flex items-center gap-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24 14.82 8.63 12 2 9.18 8.63 2 9.24 7.46 13.97 5.82 21z"/>
+        </svg>
+        <div class="font-semibold text-lg">5 Star Rated</div>
+      </div>
+      <p class="text-indigo-100 text-sm leading-relaxed">
+        We are trusted by thousands of businesses and homeowners alike for delivering 24/7 security and unmatched customer satisfaction.
+      </p>
+      <div class="flex items-center gap-4">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b2a8cf8b-7776-4777-80b1-7cedcdaa8961.png"
+             alt="Ray Ade"
+             class="rounded-full w-14 h-14 object-cover shadow" />
+        <div>
+          <div class="font-semibold">Ray Ade</div>
+          <div class="text-indigo-300 text-xs italic">Client</div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-300 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h8m-8 4h6" />
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Security Solutions Section -->
+  <section class="bg-indigo-700 text-white py-16 px-6">
+    <div class="max-w-5xl mx-auto text-center max-w-lg">
+      <h2 class="text-4xl font-extrabold mb-4">Security Solutions for Your Work and Home</h2>
+      <p class="opacity-90 mb-8">
+  Experience peace of mind with our cutting-edge security systems tailored for both homes and workplaces. Whether you're safeguarding your family or protecting business assets, our smart solutions provide real-time monitoring, instant alerts, and effortless control—anytime, anywhere.
+</p>
+
+      <button class="bg-indigo-900 hover:bg-indigo-800 rounded-md py-2 px-8 font-semibold transition focus:outline-none focus:ring-2 focus:ring-indigo-400 mr-4">Learn More</button>
+      <button aria-label="Play button" class="inline-flex items-center justify-center bg-indigo-500 hover:bg-indigo-600 rounded-full w-14 h-14 shadow focus:outline-none" id="security-play-btn">
+        <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M8 5v14l11-7z"></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Blog & Articles -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-extrabold mb-4 text-center">Blog & Article</h2>
+  <p class="text-gray-600 text-center max-w-xl mx-auto mb-12">
+    Stay informed with the latest insights on security technology, smart surveillance, and industry best practices from our expert team.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-7xl mx-auto">
+    <!-- Card 1 -->
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <img
+  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/27181bc0-c7c1-4862-95b0-befd41119d2c.png"
+  alt="Security camera"
+  class="w-full h-80 object-cover"
+/>
+
+
+      <div class="p-6">
+        <div class="flex items-center text-xs text-indigo-600 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 21h14M12 14v7" />
+          </svg>
+          26 October, 2023
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Security Solutions</h3>
+        <p class="text-sm text-gray-600 mb-4">Explore how modern security systems are transforming safety for homes and businesses with real-time alerts and smart features.</p>
+        <a href="#" class="text-indigo-700 font-semibold hover:underline">Learn more &rarr;</a>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <img
+  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/27181bc0-c7c1-4862-95b0-befd41119d2c.png"
+  alt="Security camera"
+  class="w-full h-80 object-cover"
+/>
+
+
+      <div class="p-6">
+        <div class="flex items-center text-xs text-indigo-600 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 21h14M12 14v7" />
+          </svg>
+          26 October, 2023
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Monitor the Workplace</h3>
+        <p class="text-sm text-gray-600 mb-4">Learn how to keep your workplace secure from anywhere using smart surveillance, mobile access, and cloud-based monitoring.</p>
+        <a href="#" class="text-indigo-700 font-semibold hover:underline">Learn more &rarr;</a>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <img
+  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/27181bc0-c7c1-4862-95b0-befd41119d2c.png"
+  alt="Security camera"
+  class="w-full h-80 object-cover"
+/>
+
+      <div class="p-6">
+        <div class="flex items-center text-xs text-indigo-600 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 11h18M5 21h14M12 14v7" />
+          </svg>
+          26 October, 2023
+        </div>
+        <h3 class="font-semibold text-lg mb-2">Why Choose Securez</h3>
+        <p class="text-sm text-gray-600 mb-4">Discover what sets Securez apart—from advanced technology to responsive customer support and trusted expertise.</p>
+        <a href="#" class="text-indigo-700 font-semibold hover:underline">Learn more &rarr;</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+  <!-- Newsletter & Footer -->
+  <footer class="bg-indigo-700 text-indigo-200 pt-16 pb-10 px-6">
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-10">
+      <div class="lg:col-span-2">
+        <h3 class="text-lg font-semibold mb-4">Our Newsletters</h3>
+        <p class="mb-6 max-w-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <form class="flex max-w-md" id="newsletter-form">
+          <input type="email" name="newsletter-email" placeholder="Email" required class="rounded-l-md px-4 py-2 border-0 focus:outline-none text-gray-900" />
+          <button type="submit" class="bg-indigo-900 hover:bg-indigo-800 text-white rounded-r-md px-6 font-semibold transition focus:outline-none focus:ring-2 focus:ring-indigo-400">Submit</button>
+        </form>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4 text-white">Navigation</h4>
+        <ul class="space-y-3 text-indigo-300 text-sm">
+          <li><a href="#" class="hover:text-indigo-100 transition">Home</a></li>
+          <li><a href="#" class="hover:text-indigo-100 transition">Pages</a></li>
+          <li><a href="#" class="hover:text-indigo-100 transition">About us</a></li>
+          <li><a href="#" class="hover:text-indigo-100 transition">Services</a></li>
+          <li><a href="#" class="hover:text-indigo-100 transition">Blog</a></li>
+          <li><a href="#" class="hover:text-indigo-100 transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4 text-white">Quick Link</h4>
+        <ul class="space-y-3 text-indigo-300 text-sm">
+          <li><a href="#" class="hover:text-indigo-100 transition">Contact Us</a></li>
+          <li><a href="#" class="hover:text-indigo-100 transition">FAQs</a></li>
+          <li><a href="#" class="hover:text-indigo-100 transition">Gallery</a></li>
+          <li><a href="#" class="hover:text-indigo-100 transition">Pricing</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-indigo-500 pt-6 text-sm opacity-80">
+
+      <div class="mb-4 md:mb-0">
+        <div><strong>Work Hours</strong></div>
+        <div class="mt-1">7 AM - 5 PM, Mon - Sat</div>
+      </div>
+
+      <div>
+        <button class="bg-indigo-900 hover:bg-indigo-800 px-5 py-2 rounded-md font-semibold transition focus:outline-none focus:ring-2 focus:ring-indigo-400">Call Us</button>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center text-indigo-400 text-xs font-light">
+      © 2023 - Developed by BlackboxAI - All Rights Reserved
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.add("hidden");
+  }
+
+
+    // Highlight services cards interactive behavior
+    const serviceCards = document.querySelectorAll('[data-card]');
+    const highlightedCard = document.getElementById('highlighted-card');
+
+    serviceCards.forEach(card => {
+      card.addEventListener('click', () => {
+        serviceCards.forEach(c => {
+          if(c === card) {
+            c.classList.add('card-active');
+            c.classList.remove('bg-indigo-200', 'hover:bg-indigo-100', 'text-indigo-700');
+            c.classList.add('bg-indigo-900', 'text-white');
+          } else {
+            c.classList.remove('card-active', 'bg-indigo-900', 'text-white');
+            c.classList.add('bg-indigo-200', 'hover:bg-indigo-100', 'text-indigo-700');
+          }
+        });
+      });
+    });
+
+    // Play button on Hero Image
+
+
+  const playBtn = document.getElementById("hero-play-btn");
+  const modal = document.getElementById("video-modal");
+  const iframe = document.getElementById("video-frame");
+  const closeBtn = document.getElementById("modal-close");
+
+  const videoURL = "https://www.youtube.com/embed/zpOULjyy-n8"; // ← Replace your own
+
+  playBtn.addEventListener("click", () => {
+    iframe.src = videoURL;
+    modal.classList.remove("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    iframe.src = "";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      iframe.src = "";
+    }
+  });
+
+
+  // Optional: Close modal on background click
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      iframe.src = "";
+    }
+  });
+
+
+    });
+    // Play button on Security Solutions
+    document.getElementById('security-play-btn').addEventListener('click', () => {
+      alert('Play security solutions video (not implemented).');
+    });
+
+    // Innovation form submission
+    document.getElementById('innovation-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert("Thank you for your interest. Your message has been submitted.");
+      e.target.reset();
+    });
+
+    // Newsletter form submission
+    document.getElementById('newsletter-form').addEventListener('submit', e => {
+      e.preventDefault();
+      alert("Thank you for subscribing to our newsletter!");
+      e.target.reset();
+    });
+
+  </script>
+<!-- Video Modal -->
+<div id="video-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+  <div class="relative w-full max-w-2xl bg-white rounded-xl overflow-hidden shadow-xl">
+    <button id="modal-close" class="absolute top-2 right-3 text-gray-500 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <div class="aspect-video w-full">
+      <iframe id="video-frame" class="w-full h-full" src="" title="Video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+{% block body %} {% endblock %}
+{% block content %} {% endblock %}
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+

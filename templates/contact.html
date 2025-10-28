@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container px-0">
+      <img src="{% static 'blomma-full-screen-111.gif' %}" class="d-block h-30 w-90 my-4 px-0" alt="...">
+    </div>
+<div class="container px-0">
+
+    <h1 style="position:absolute;  left:340px; top:150px ">Contact us</h1>
+    <form method="post" action="/contact">
+        {% csrf_token %}
+        <div class="mb-3">
+    <label for="NAME" class="form-label">Name </label>
+    <input type="name" class="form-control" id="name" name="name">
+    <div id="nameHelp" class="form-text">We'll never share your name with anyone else.</div>
+  </div>
+        <div class="mb-3">
+    <label class="form-label">Phone number</label>
+    <input type="number" class="form-control" id="contact" name="phone" >
+    <div id="phoneHelp" class="form-text">We'll never share your phone number with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+</div>
+{% endblock %}
